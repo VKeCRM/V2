@@ -1,0 +1,5 @@
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.DataAccess.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.DataAccess.pdb
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Common.DataAccess\obj\Debug\VKeCRM.Common.DataAccess.csprojResolveAssemblyReference.cache
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Common.DataAccess\obj\Debug\VKeCRM.Common.DataAccess.dll
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Common.DataAccess\obj\Debug\VKeCRM.Common.DataAccess.pdb

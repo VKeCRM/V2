@@ -1,0 +1,5 @@
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.DataAccess.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.DataAccess.pdb
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Portal.DataAccess\obj\Debug\VKeCRM.Portal.DataAccess.csprojResolveAssemblyReference.cache
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Portal.DataAccess\obj\Debug\VKeCRM.Portal.DataAccess.dll
+D:\Work\Framework\VkCRMFramework\v1\DataAccess\VKeCRM.Portal.DataAccess\obj\Debug\VKeCRM.Portal.DataAccess.pdb

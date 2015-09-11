@@ -1,0 +1,30 @@
+﻿.navbar-brand
+{
+    float: right !important;
+    padding-left:20px;
+    color: #fff !important;
+}
+
+.navbar-nav
+{
+    float: right !important;
+    color:#fff !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:#fff !important;
+}
+
+.logo
+{
+    width:80px;
+}
+.navbar-collapse
+{
+    background:url(assets/top-bg.png) no-repeat scroll;
+    background-size:100%;
+}
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -15px;
+    margin-right: -15px;
+}

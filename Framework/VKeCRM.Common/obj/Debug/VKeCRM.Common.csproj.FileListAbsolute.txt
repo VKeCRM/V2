@@ -1,0 +1,8 @@
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.pdb
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.csprojResolveAssemblyReference.cache
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.Messages.ErrorMessages.resources
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.Messages.Messages.resources
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.csproj.GenerateResource.Cache
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.dll
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common\obj\Debug\VKeCRM.Common.pdb

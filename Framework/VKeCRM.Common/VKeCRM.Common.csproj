@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{53FA78B6-D765-4CED-A01B-703B06F8D988}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VKeCRM.Common</RootNamespace>
+    <AssemblyName>VKeCRM.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\BinOutput\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\BinRef\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\BinRef\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\BinRef\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\EnumerableExtensions.cs" />
+    <Compile Include="Collections\VKList.cs" />
+    <Compile Include="Collections\PagingOptions.cs" />
+    <Compile Include="Collections\WhereOptions.cs" />
+    <Compile Include="Configuration\VKeCRMConfigurationSectionGroup.cs" />
+    <Compile Include="Configuration\UrlRewriter\RewriterConfiguration.cs" />
+    <Compile Include="Configuration\UrlRewriter\RewriterRule.cs" />
+    <Compile Include="Configuration\UrlRewriter\RewriterRuleCollection.cs" />
+    <Compile Include="Configuration\UrlRewriter\RewriterSectionHandler.cs" />
+    <Compile Include="Cryptography\Collections\RSACryptoServiceProviderCollection.cs" />
+    <Compile Include="Cryptography\Crypter.cs" />
+    <Compile Include="Cryptography\DesCryptoProvider.cs" />
+    <Compile Include="Cryptography\ICryptoProvider.cs" />
+    <Compile Include="Cryptography\KeyContainer.cs" />
+    <Compile Include="Cryptography\Md5Provider.cs" />
+    <Compile Include="Cryptography\PasswordRating.cs" />
+    <Compile Include="Cryptography\PasswordStrength.cs" />
+    <Compile Include="Cryptography\PensonPasswordProvider.cs" />
+    <Compile Include="Cryptography\Rijndael.cs" />
+    <Compile Include="Cryptography\RsaCryptoProvider.cs" />
+    <Compile Include="Cryptography\RsaKeySize.cs" />
+    <Compile Include="Cryptography\TripleDesCryptoProvider.cs" />
+    <Compile Include="Cryptography\Win32Native.cs" />
+    <Compile Include="Cryptography\Win32NativeEnums.cs" />
+    <Compile Include="DataTransferObjects\IDataTransferObject.cs" />
+    <Compile Include="DataTransferObjects\IMvcModule.cs" />
+    <Compile Include="Dictionary\ApplicationForm.cs" />
+    <Compile Include="Dictionary\Model\Part.cs" />
+    <Compile Include="Dictionary\Model\Section.cs" />
+    <Compile Include="Enum\EnumExtension.cs" />
+    <Compile Include="Exceptions\ADAuthenticationException.cs" />
+    <Compile Include="Exceptions\CryptoAquireContextException.cs" />
+    <Compile Include="Exceptions\CryptoGetProviderParamException.cs" />
+    <Compile Include="Exceptions\CryptoReleaseContextException.cs" />
+    <Compile Include="Exceptions\CSPException.cs" />
+    <Compile Include="Exceptions\EmailFailedException.cs" />
+    <Compile Include="Exceptions\KeyDoesNotExistsException.cs" />
+    <Compile Include="Exceptions\KeyExistsException.cs" />
+    <Compile Include="Exceptions\MedisysCommonExceptionBase.cs" />
+    <Compile Include="Exceptions\PrivateKeyFileExistsException.cs" />
+    <Compile Include="Exceptions\PrivateKeyFilenameRequiredException.cs" />
+    <Compile Include="Exceptions\PublicKeyFileExistsException.cs" />
+    <Compile Include="Exceptions\PublicKeyFilenameRequiredException.cs" />
+    <Compile Include="Exceptions\UnknownException.cs" />
+    <Compile Include="Exceptions\Win32Exception.cs" />
+    <Compile Include="Icons\IconParameter.cs" />
+    <Compile Include="IO\Compression\CompressionAlgorithm.cs" />
+    <Compile Include="IO\Compression\CompressionExtension.cs" />
+    <Compile Include="IO\DirectoryManager.cs" />
+    <Compile Include="IO\ExportToCSV.cs" />
+    <Compile Include="IO\File.cs" />
+    <Compile Include="IO\FilePathManager.cs" />
+    <Compile Include="IO\IOExtension.cs" />
+    <Compile Include="IO\Path.cs" />
+    <Compile Include="Logging\Logger.cs" />
+    <Compile Include="Logging\LoggerManager.cs" />
+    <Compile Include="Lookup\ILookup.cs" />
+    <Compile Include="Lookup\LookupBase.cs" />
+    <Compile Include="Mail\Mailer.cs" />
+    <Compile Include="Mail\SmtpHelper.cs" />
+    <Compile Include="Messages\ErrorMessages.Designer.cs" />
+    <Compile Include="Messages\Messages.Designer.cs" />
+    <Compile Include="NamedPipe\ClientNamedPipe.cs" />
+    <Compile Include="NamedPipe\NamedPipeBase.cs" />
+    <Compile Include="NamedPipe\ReceivedMessageEventArgs.cs" />
+    <Compile Include="NamedPipe\ServerNamedPipe.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Collections\ResourceStringDictionary.cs" />
+    <Compile Include="Resources\Resource.cs" />
+    <Compile Include="Resources\SiteMapConverter.cs" />
+    <Compile Include="Security\Encryption\DEncrypt4ImageHelper.cs" />
+    <Compile Include="Security\Encryption\HashEncryption.cs" />
+    <Compile Include="Security\Encryption\SymmetricEncryption.cs" />
+    <Compile Include="Security\Encryption\SymmetricEncryptionKey.cs" />
+    <Compile Include="Security\QueryStringHelper.cs" />
+    <Compile Include="Serialization\BinaryPersister.cs" />
+    <Compile Include="Serialization\FixmlSerialize.cs" />
+    <Compile Include="Serialization\FixmlTextWriter.cs" />
+    <Compile Include="Serialization\FormatterFilePersister.cs" />
+    <Compile Include="Serialization\FormatterPersister.cs" />
+    <Compile Include="Serialization\FormatterStringPersister.cs" />
+    <Compile Include="Serialization\Persister.cs" />
+    <Compile Include="Serialization\XmlByteArrayPersister.cs" />
+    <Compile Include="Serialization\XmlFilePersister.cs" />
+    <Compile Include="Serialization\XmlPersister.cs" />
+    <Compile Include="Serialization\XmlStringPersister.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceClientBehaviorExtensionElement.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceClientEndpointBehavior.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceClientMessageInspector.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceServerBehaviorExtensionElement.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceServerEndpointBehavior.cs" />
+    <Compile Include="Trace\ServiceInspector\TraceServerMessageInspector.cs" />
+    <Compile Include="Trace\TraceInfo.cs" />
+    <Compile Include="Trace\TraceLogger.cs" />
+    <Compile Include="Trace\TraceStatus.cs" />
+    <Compile Include="Trace\TraceType.cs" />
+    <Compile Include="Utility\Convert.cs" />
+    <Compile Include="Utility\ConvertException.cs" />
+    <Compile Include="Utility\DesignByContract.cs" />
+    <Compile Include="Utility\HTMLHelper.cs" />
+    <Compile Include="Utility\ObjectCopyExtensions.cs" />
+    <Compile Include="Utility\PredicateExtensions.cs" />
+    <Compile Include="Utility\QueryExtensions.cs" />
+    <Compile Include="Utility\SerializerHelper.cs" />
+    <Compile Include="Utility\TextFormatHelper.cs" />
+    <Compile Include="Utility\WcfClientHelper.cs" />
+    <Compile Include="Utility\XsltTransformHelper.cs" />
+    <Compile Include="Validation\AddressValidator.cs" />
+    <Compile Include="Validation\CompareBooleanValidator.cs" />
+    <Compile Include="Validation\CompareDateTimeValidator.cs" />
+    <Compile Include="Validation\CompareDecimalValidator.cs" />
+    <Compile Include="Validation\CompareDoubleValidator.cs" />
+    <Compile Include="Validation\CompareIntegerValidator.cs" />
+    <Compile Include="Validation\CompareStringValidator.cs" />
+    <Compile Include="Validation\CompareValidatorBase.cs" />
+    <Compile Include="Validation\CreditCardValidator.cs" />
+    <Compile Include="Validation\DataTypeValidator.cs" />
+    <Compile Include="Validation\DateValidator.cs" />
+    <Compile Include="Validation\EmailAddressValidator.cs" />
+    <Compile Include="Validation\IncompatibleValidatorExists.cs" />
+    <Compile Include="Validation\Mvc\IngoreTaretPair.cs" />
+    <Compile Include="Validation\Mvc\MvcCompareAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcCustomerAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcDateFormatAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcRegularExpressionAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcRequiredAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcRestrictAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcTextFilterAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcValidationAttribute.cs" />
+    <Compile Include="Validation\Mvc\MvcValidationType.cs" />
+    <Compile Include="Validation\PhoneNumberValidator.cs" />
+    <Compile Include="Validation\RangeDateTimeValidator.cs" />
+    <Compile Include="Validation\RangeDecimalValidator.cs" />
+    <Compile Include="Validation\RangeDoubleValidator.cs" />
+    <Compile Include="Validation\RangeIntegerValidator.cs" />
+    <Compile Include="Validation\RangeStringValidator.cs" />
+    <Compile Include="Validation\RangeValidatorBase.cs" />
+    <Compile Include="Validation\RegExValidator.cs" />
+    <Compile Include="Validation\RequiredLengthValidator.cs" />
+    <Compile Include="Validation\RequiredValidator.cs" />
+    <Compile Include="Validation\TextFilterValidator.cs" />
+    <Compile Include="Validation\UserNameValidator.cs" />
+    <Compile Include="Validation\ValidatorBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Logging\log4net.config" />
+    <None Include="Logging\log4net.config.prod" />
+    <None Include="Logging\log4net.config.qa" />
+    <None Include="Logging\log4net.config.stage" />
+    <None Include="Logging\log4net.config.uat" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Messages\ErrorMessages.resx" />
+    <EmbeddedResource Include="Messages\Messages.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

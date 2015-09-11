@@ -1,0 +1,883 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net>
+  <!-- ********************************************** Appender Settings for all loggers ************************************* -->
+  <appender name="RemoteSyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local1" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+
+  <appender name="ApplySyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local2" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+
+  <appender name="HermsActivitySyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local3" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+
+  <appender name="ApolloDetailSyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local4" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+
+  <appender name="OrderSyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local5" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+
+  <appender name="TAPISyslogAppender" type="log4net.Appender.RemoteSyslogAppender">
+    <facility value="Local6" />
+    <identity value="Global[%level][%property{log4net:HostName}]" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+    <remoteAddress value="127.0.0.1" />
+  </appender>
+	
+  <appender name="LogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\Log4Net.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="JsamServiceLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\JsamServiceDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="ApiWebLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\ApiWebDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="TapiWebLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\TapiWebDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+	<appender name="FacebookWebLogFileAppender" type="log4net.Appender.RollingFileAppender">
+		<file value="c:\\logs\\FacebookWebDetail.log"/>
+		<appendToFile value="true"/>
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10MB" />
+		<countDirection value="1" />
+		<staticLogFileName value="true" />
+		<lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+		<layout type="log4net.Layout.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+		</layout>
+	</appender>
+	
+  <appender name="HttpTraceAppender" type="log4net.Appender.AspNetTraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%ndc] - %message%newline"/>
+    </layout>
+  </appender>
+
+  <appender name="KickOutInfoLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\KickOutInfo.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+	<appender name="NexaLogFileAppender" type="log4net.Appender.RollingFileAppender">
+		<file value="c:\\logs\\NexaDetail.log"/>
+		<appendToFile value="true"/>
+		<rollingStyle value="Date" />
+		<datePattern value="yyyyMMdd" />
+		<lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+		<layout type="log4net.Layout.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c %m%n"/>
+		</layout>
+	</appender>
+
+  <appender name="ApplyAdminFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\ApplyAdminDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="HermesLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\HermesDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="HermesPensonAutoTestLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\HermesPensonAutoTestDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="HermesActivityLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\HermesActivity.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Date" />
+    <datePattern value="yyyyMMdd" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+	<appender name="ApolloActivityLogFileAppender" type="log4net.Appender.RollingFileAppender">
+		<file value="c:\\logs\\ApolloActivity.log"/>
+		<appendToFile value="true"/>
+		<rollingStyle value="Date" />
+		<datePattern value="yyyyMMdd" />
+		<lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+		<layout type="log4net.Layout.PatternLayout">
+			<param name="ConversionPattern" value="%c %m%n"/>
+		</layout>
+	</appender>
+	
+  <appender name="ApolloLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\ApolloDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="ZapLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\ZapDetail.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="SmtpAppender" type="log4net.Appender.SmtpAppender,log4net">
+    <to value="it@zecco.net"/>
+    <from value="alerts@jangl.com"/>
+    <subject value="System Logging Message"/>
+    <smtpHost value="dc01bg.zh.local"/>
+    <bufferSize value="512"/>
+    <lossy value="false"/>
+    <evaluator type="log4net.Core.LevelEvaluator,log4net">
+      <threshold value="DEBUG"/>
+    </evaluator>
+    <layout type="log4net.Layout.PatternLayout,log4net">
+      <conversionPattern value="%property{log4net:HostName} :: %level :: %message %newlineLogger: %logger%newlineThread: %thread%newlineDate: %date%newlineNDC: %property{NDC}%newline%newline"/>
+    </layout>
+  </appender>
+
+  <appender name="ApplyBackendServiceLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\ApplyBackendService.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Date" />
+    <datePattern value="yyyyMMdd" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d %-5p %c %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="TraceLogFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="c:\\logs\\VKeCRMTrace.log"/>
+    <appendToFile value="true"/>
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10MB" />
+    <countDirection value="1" />
+    <staticLogFileName value="true" />
+    <lockingModel type="log4net.Appender.FileAppender+MinimalLock" />
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss.fffffff}] [%t] [%-5p] [%c] [%X{SessionId}] [%X{TraceUniqueId}] [%X{TraceLevel}] [%X{TraceType}] [%X{TraceName}] [%X{TraceStatus}] %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="TraceADONetAppender" type="log4net.Appender.ADONetAppender">
+    <bufferSize value="1" />
+    <connectionType value="System.Data.SqlClient.SqlConnection, System.Data, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+    <connectionString value="server=192.168.0.20;database=VKeCRMTrace;uid=sa;pwd=!@#sa!@#;" />
+    <commandText value="INSERT INTO VKeCRM.TraceLog4Dev ([CreatedDateTime],[Thread],[LogLevel],[Logger],[Content],[Exception],[SessionId],[TraceUniqueId],[TraceLevel],[TraceType],[TraceName],[Duration],[TraceStatus],[TraceTick]) VALUES (@log_date, @thread, @log_level, @logger, @message, @exception, @SessionId, @TraceUniqueId, @TraceLevel, @TraceType, @TraceName, @Duration, @TraceStatus, @TraceTick)" />
+    <parameter>
+      <parameterName value="@log_date" />
+      <dbType value="DateTime" />
+      <layout type="log4net.Layout.RawTimeStampLayout" />
+    </parameter>
+    <parameter>
+      <parameterName value="@thread" />
+      <dbType value="String" />
+      <size value="50" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%t" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@log_level" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%p" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@logger" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%logger" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@message" />
+      <dbType value="String" />
+      <size value="4000" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%m" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@exception" />
+      <dbType value="String" />
+      <size value="2000" />
+      <layout type="log4net.Layout.ExceptionLayout" />
+    </parameter>
+    <parameter>
+      <parameterName value="@SessionId" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{SessionId}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceUniqueId" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{TraceUniqueId}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceLevel" />
+      <dbType value="String" />
+      <size value="10" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{TraceLevel}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceType" />
+      <dbType value="String" />
+      <size value="100" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{TraceType}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceName" />
+      <dbType value="String" />
+      <size value="200" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{TraceName}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@Duration" />
+      <dbType value="String" />
+      <size value="10" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{Duration}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceStatus" />
+      <dbType value="String" />
+      <size value="20" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%X{TraceStatus}" />
+      </layout>
+    </parameter>
+    <parameter>
+      <parameterName value="@TraceTick" />
+      <dbType value="String" />
+      <size value="50" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="%d{yyyy-MM-dd HH:mm:ss.fffffff}" />
+      </layout>
+    </parameter>
+  </appender>
+  <!-- ********************************************************************************************************************** -->
+
+
+  <!-- *********************************************** WCF Service Loggers ************************************************** -->
+  <!-- VKeCRM.Portal.Services Loggers Begine -->
+  <!-- CommunityConnectionService Logger Settings -->
+  <logger name="VKeCRM.CommunityConnectionService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- CommunityDiscussionService Logger Settings -->
+  <logger name="VKeCRM.CommunityDiscussionService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- CommunityIntelligenceService Logger Settings -->
+  <logger name="VKeCRM.CommunityIntelligenceService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- MemberService Logger Settings -->
+  <logger name="VKeCRM.MemberService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- MessagingService Logger Settings -->
+  <logger name="VKeCRM.MessagingService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- PortfolioService Logger Settings -->
+  <logger name="VKeCRM.PortfolioService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- ProfileService Logger Settings -->
+  <logger name="VKeCRM.ProfileService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- OuoteService Logger Settings -->
+  <logger name="VKeCRM.OuoteService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Portal.Services Loggers End -->
+
+
+  <!-- VKeCRM.Security.Services Loggers Begine -->
+  <!-- MembershipProviderService Logger Settings -->
+  <logger name="VKeCRM.MembershipProviderService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- RoleProviderService Logger Settings -->
+  <logger name="VKeCRM.RoleProviderService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- SecurityChallengeService Logger Settings -->
+  <logger name="VKeCRM.SecurityChallengeService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Security.Services Loggers End -->
+
+
+  <!-- VKeCRM.ContentManagement.Services Loggers Begine -->
+  <!-- ContentEditorService Logger Settings -->
+  <logger name="VKeCRM.ContentEditorService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.ContentManagement.Services Loggers End -->
+
+
+  <!-- VKeCRM.ConfugerationManagement.Services Loggers Begine -->
+  <!-- ApplicationSettingsService Logger Settings -->
+  <logger name="VKeCRM.ApplicationSettingsService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.ConfugerationManagement.Services Loggers End -->
+
+
+  <!-- VKeCRM.Trading.Services Loggers Begine -->
+  <!-- Trading ProfileService Logger Settings -->
+  <logger name="VKeCRM.Trading.ProfileService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Trading.Services Loggers End -->
+
+
+  <!-- VKeCRM.Messaging.Services Loggers Begine -->
+  <!-- MailboxService Logger Settings -->
+  <logger name="VKeCRM.MailboxService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Messaging.Services Loggers End -->
+
+
+  <!-- VKeCRM.CacheManagement.Services Loggers Begine -->
+  <!-- NHibernateSecondLevelCacheService Logger Settings -->
+  <logger name="VKeCRM.NHibernateSecondLevelCacheService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.CacheManagement.Services Loggers End -->
+
+
+  <!-- VKeCRM.Quote.Services Loggers Begine -->
+  <!-- QuotesService Logger Settings -->
+  <logger name="VKeCRM.QuotesService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Quote.Services Loggers End -->
+
+  <!-- VKeCRM.Integration.CommunityServer.Services Loggers Begin -->
+  <!-- DiscussionsService Logger Settings -->
+  <logger name="VKeCRM.DiscussionsService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+
+  <!-- AdminService Logger Settings -->
+  <logger name="VKeCRM.AdminService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Integration.CommunityServer.Services Loggers End -->
+
+  <!-- GainsKeeper Logger Settings -->
+  <logger name="VKeCRM.GainsKeeperService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- GainsKeeper Loggers End -->
+
+  <!-- RelationshipCashTransfer Logger Settings -->
+  <logger name="VKeCRM.RelationshipCashTransferService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- RelationshipCashTransfer Loggers End -->
+
+  <!-- Group Logger Settings -->
+  <logger name="VKeCRM.GroupService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- Group Loggers End -->
+
+  <!-- VKeCRM.ApplyService Logger Settings -->
+  <logger name="VKeCRM.ApplyService">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="ApplySyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.ApplyService Logger Settings End -->
+
+  <!-- VKeCRM.Framework.ServiceModel Logger Settings -->
+  <logger name="VKeCRM.ServiceModelLogger">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Framework.ServiceModel Loggers End -->
+  <!-- ********************************************************************************************************************** -->
+
+  <!-- ************************************************** Web Site Loggers ************************************************** -->
+  <!-- VKeCRM.Portal.Web Logger Settings -->
+  <logger name="VKeCRM.Portal.Web">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Portal.Web Loggers End -->
+
+  <!-- VKeCRM.Portal.Admin.Web Logger Settings -->
+  <logger name="VKeCRM.Portal.Admin.Web">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Portal.Admin.Web Loggers End -->
+
+  <!-- VKeCRM.Trading.Web Logger Settings -->
+  <logger name="VKeCRM.Trading.Web">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Trading.Web Loggers End -->
+
+  <!-- VKeCRM.Ola Logger Settings -->
+  <logger name="VKeCRM.Ola">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="ApplySyslogAppender"/>
+  </logger>
+  <logger name="VKeCRM.Apply">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="ApplySyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Ola Loggers End -->
+
+  <!-- VKeCRM.OlaCommon Logger Settings -->
+  <logger name="VKeCRM.OlaCommon">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+    <appender-ref ref="ApplySyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.OlaCommon Loggers End -->
+
+  <!-- VKeCRM.JsamService Logger Settings -->
+  <logger name="VKeCRM.JsamService">
+    <level value="All"/>
+    <appender-ref ref="JsamServiceLogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.JsamService Loggers End -->
+
+  <!-- VKeCRM.Api.Web Logger Settings -->
+  <logger name="VKeCRM.Api.Web">
+    <level value="Error"/>
+    <appender-ref ref="ApiWebLogFileAppender"/>
+  </logger>
+  <!-- VKeCRM.Api.Web Logger End -->
+
+  <!-- VKeCRM.Tapi.Web Logger Settings -->
+  <logger name="VKeCRM.Tapi.Web">
+    <level value="Error"/>
+    <appender-ref ref="TapiWebLogFileAppender"/>
+    <appender-ref ref="TAPISyslogAppender"/>
+  </logger>
+  <!-- VKeCRM.Tapi.Web Logger End -->
+
+  <!-- Nexa Logger Settings -->
+  <logger name="VKeCRM.NexaLogFileAppender">
+    <level value="Error"/>
+    <appender-ref ref="NexaLogFileAppender"/>
+  </logger>
+  <!-- Nexa Loggers End -->
+
+  <!-- KickOut information Logger Settings -->
+  <logger name="VKeCRM.KickOutInfo">
+    <level value="Debug"/>
+    <appender-ref ref="KickOutInfoLogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- KickOut information Logger End -->
+
+  <!-- Hermes Logger Settings -->
+  <logger name="VKeCRM.Hermes">
+    <level value="Error"/>
+    <appender-ref ref="HermesLogFileAppender"/>
+    <appender-ref ref="RemoteSyslogAppender"/>
+  </logger>
+  <!-- Hermes Loggers End -->
+
+  <!-- Hermes Penson Auto Test Logger Settings -->
+  <logger name="VKeCRM.HermesPensonAutoTest">
+    <level value="Debug"/>
+    <appender-ref ref="HermesPensonAutoTestLogFileAppender"/>
+    <appender-ref ref="OrderSyslogAppender"/>
+  </logger>
+  <!-- Hermes Loggers End -->
+
+  <!-- Hermes Penson Auto Test Logger Settings -->
+  <logger name="VKeCRM.HermesActivity">
+    <level value="Debug"/>
+    <appender-ref ref="HermesActivityLogFileAppender"/>
+    <appender-ref ref="HermsActivitySyslogAppender"/>
+  </logger>
+  <!-- Hermes Loggers End -->
+
+  <!-- Apollo Logger Settings -->
+  <logger name="VKeCRM.ApolloLogFileAppender">
+    <level value="Error"/>
+    <appender-ref ref="ApolloLogFileAppender"/>
+    <appender-ref ref="ApolloDetailSyslogAppender"/>
+  </logger>
+  <!-- Apollo Loggers End -->
+
+	<!-- Facebook Logger Settings -->
+	<logger name="VKeCRM.Facebook.Web">
+		<level value="Error"/>
+		<appender-ref ref="FacebookWebLogFileAppender"/>
+	</logger>
+	<!-- Facebook Loggers End -->
+	
+  <logger name="VKeCRM.ZapDownload">
+    <level value="Debug"/>
+    <appender-ref ref="ZapLogFileAppender"/>
+  </logger>
+
+  <logger name="VKeCRM.ApplyAdmin">
+    <level value="Error"/>
+    <appender-ref ref="ApplyAdminFileAppender"/>
+    <appender-ref ref="ApplySyslogAppender"/>
+  </logger>
+
+  <logger name="VKeCRM.VKeCRMCommon">
+    <level value="Error"/>
+    <appender-ref ref="LogFileAppender"/>
+  </logger>
+  <!-- ********************************************************************************************************************** -->
+
+  <!-- *********************************************** Apply Listener Logger ************************************************ -->
+  <logger name="VKeCRM.ApplyListener">
+    <level value="Information"/>
+    <appender-ref ref="ApplyBackendServiceLogFileAppender"/>
+  </logger>
+  <!-- ********************************************************************************************************************** -->
+
+
+	<!--Apollo Activity Logger Settings-->
+	<logger name="VKeCRM.ApolloActivity">
+		<level value="All"></level>
+		<appender-ref ref="ApolloActivityLogFileAppender"></appender-ref>
+		<!--<appender-ref ref="ApolloActivitySyslogAppender"></appender-ref>-->
+	</logger>
+	<!--Apollo Activity Logger Settings End-->
+	
+	<!-- VKeCRM Trace Logger Settings -->
+  <!--
+	<logger name="VKeCRM.Trace.Page">
+		<level value="Debug"/>
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Trace.Service.Client">
+		<level value="Debug"/>
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Trace.Service.Server">
+		<level value="Error"/>
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="NHibernate.SQL">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Framework.Data" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Common.DataAccess.Search" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Global.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Messaging.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Portal.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Quote.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Security.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Trading.DataAccess.DataAccessObjects" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Portal.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Security.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Trading.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.ConfigurationManagement.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Hermes.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Messaging.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.ContentManagement.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Quote.Business" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Trading.Web.Framework" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Portal.Web.Framework" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	<logger name="VKeCRM.Portal.Web.JsonController" additivity="false">
+		<level value="Debug" />
+		<appender-ref ref="TraceLogFileAppender"/>
+		<appender-ref ref="RemoteSyslogAppender"/>
+	</logger>
+	-->
+  <!-- VKeCRM Trace Logger Settings End -->
+
+</log4net>

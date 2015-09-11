@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="VKeCRM.Common.DataAccess" namespace="VKeCRM.Portal.DataAccess.DomainObjects">
+  <sql-query name="GetOrder" cache-mode="ignore">
+    <![CDATA[exec dbo.sp_get_all_orders @id=:orderId]]>
+  </sql-query>
+</hibernate-mapping>
+

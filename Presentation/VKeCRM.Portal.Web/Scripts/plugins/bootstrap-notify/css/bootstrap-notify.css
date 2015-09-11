@@ -1,0 +1,49 @@
+.notifications {
+  /*position: fixed;*/
+    position: relative;
+}
+
+/* Positioning */ 
+.notifications.top-right {
+  right: 10px;
+  top: 25px;
+}
+
+.notifications.top-left {
+  left: 10px;
+  top: 25px;
+}
+
+.notifications.bottom-left {
+  left: 10px;
+  bottom: 25px;
+}
+
+.notifications.bottom-right {
+  right: 10px;
+  bottom: 25px;
+}
+
+.notifications.top-center {
+    /*right: 400px;
+    top: 0;*/
+    /*top: 25px;*/
+    width: 400px;
+    margin: 0 auto;
+    -webkit-text-wrap: normal;
+    -moz-text-wrap: normal;
+    -ms-text-wrap: normal;
+    -o-text-wrap: normal;
+    text-wrap: normal;
+    -moz-word-break: break-all;
+    -o-word-break: break-all;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+/* Notification Element */
+.notifications > div {
+  position: relative;
+  z-index: 9999;
+  margin: 5px 0px;
+}

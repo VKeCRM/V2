@@ -1,0 +1,7 @@
+D:\Work\Framework\VkCRMFramework\v1\DataTransferObjects\VKeCRM.Portal.DataTransferObjects\bin\Debug\VKeCRM.Portal.DataTransferObjects.dll
+D:\Work\Framework\VkCRMFramework\v1\DataTransferObjects\VKeCRM.Portal.DataTransferObjects\bin\Debug\VKeCRM.Portal.DataTransferObjects.pdb
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.DataTransferObjects.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.DataTransferObjects.pdb
+D:\Work\Framework\VkCRMFramework\v1\DataTransferObjects\VKeCRM.Portal.DataTransferObjects\obj\Debug\VKeCRM.Portal.DataTransferObjects.csprojResolveAssemblyReference.cache
+D:\Work\Framework\VkCRMFramework\v1\DataTransferObjects\VKeCRM.Portal.DataTransferObjects\obj\Debug\VKeCRM.Portal.DataTransferObjects.dll
+D:\Work\Framework\VkCRMFramework\v1\DataTransferObjects\VKeCRM.Portal.DataTransferObjects\obj\Debug\VKeCRM.Portal.DataTransferObjects.pdb
