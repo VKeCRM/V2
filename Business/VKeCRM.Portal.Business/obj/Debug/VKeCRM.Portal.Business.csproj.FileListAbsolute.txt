@@ -1,0 +1,5 @@
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.Business.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Portal.Business.pdb
+D:\Work\Framework\VkCRMFramework\v1\Business\VKeCRM.Portal.Business\obj\Debug\VKeCRM.Portal.Business.csprojResolveAssemblyReference.cache
+D:\Work\Framework\VkCRMFramework\v1\Business\VKeCRM.Portal.Business\obj\Debug\VKeCRM.Portal.Business.dll
+D:\Work\Framework\VkCRMFramework\v1\Business\VKeCRM.Portal.Business\obj\Debug\VKeCRM.Portal.Business.pdb

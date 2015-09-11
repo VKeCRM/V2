@@ -1,0 +1,5 @@
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.LookupEnums.dll
+D:\Work\Framework\VkCRMFramework\v1\BinOutput\VKeCRM.Common.LookupEnums.pdb
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common.LookupEnums\obj\Debug\VKeCRM.Common.LookupEnums.dll
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common.LookupEnums\obj\Debug\VKeCRM.Common.LookupEnums.pdb
+D:\Work\Framework\VkCRMFramework\v1\Framework\VKeCRM.Common.LookupEnums\obj\Debug\VKeCRM.Common.LookupEnums.csprojResolveAssemblyReference.cache

@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16CBEF12-0A15-44DC-8B22-8261D698FBC9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VKeCRM.Framework</RootNamespace>
+    <AssemblyName>VKeCRM.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\BinOutput\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\..\BinRef\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\BinRef\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\..\BinRef\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinRef\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Memcached.ClientLibrary">
+      <HintPath>..\..\BinRef\Memcached.ClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinRef\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate">
+      <HintPath>..\..\BinRef\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\..\BinRef\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Caches.MemCache">
+      <HintPath>..\..\BinRef\NHibernate.Caches.MemCache.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.Linq">
+      <HintPath>..\..\BinRef\NHibernate.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinRef\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinRef\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VKeCRM.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\BinOutput\VKeCRM.Common.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Business\Enums\AccessRight.cs" />
+    <Compile Include="Business\Enums\ExceptionErrorCode.cs" />
+    <Compile Include="Business\Enums\LoggingLevel.cs" />
+    <Compile Include="Business\Enums\NetworkType.cs" />
+    <Compile Include="Business\Exceptions\BusinessExceptionBase.cs" />
+    <Compile Include="Business\Exceptions\UnknownException.cs" />
+    <Compile Include="Business\FactoryBase.cs" />
+    <Compile Include="Business\IFactory.cs" />
+    <Compile Include="Data\CacheRegionNameEnums.cs" />
+    <Compile Include="Data\DaoBase.cs" />
+    <Compile Include="Data\DaoExtensions.cs" />
+    <Compile Include="Data\HqlParameterHelper.cs" />
+    <Compile Include="Data\Interceptors\EncryptionInterceptor.cs" />
+    <Compile Include="Data\Interceptors\IInterceptableDao.cs" />
+    <Compile Include="Data\Interceptors\IInterceptableData.cs" />
+    <Compile Include="Data\LinqDaoBase.cs" />
+    <Compile Include="Data\Linq\ClassFactory.cs" />
+    <Compile Include="Data\Linq\DynamicClass.cs" />
+    <Compile Include="Data\Linq\DynamicExpression.cs" />
+    <Compile Include="Data\Linq\DynamicProperty.cs" />
+    <Compile Include="Data\Linq\ExpressionParser.cs" />
+    <Compile Include="Data\Linq\ParseException.cs" />
+    <Compile Include="Data\Linq\Res.cs" />
+    <Compile Include="Data\Linq\Signature.cs" />
+    <Compile Include="Data\MedisysQueryProvider.cs" />
+    <Compile Include="Data\MedisysRootVisitor.cs" />
+    <Compile Include="Data\MedisysSelectManyVisitor.cs" />
+    <Compile Include="Data\NHibernateSecondLevelCacheManager.cs" />
+    <Compile Include="Data\NHibernateSessionManager.cs" />
+    <Compile Include="Data\ParamInfo.cs" />
+    <Compile Include="Data\QueryBatcher.cs" />
+    <Compile Include="Data\QueryExtension.cs" />
+    <Compile Include="Data\QueryTranslator.cs" />
+    <Compile Include="Data\RepositoryDao.cs" />
+    <Compile Include="Data\SessionFactoriesCollection.cs" />
+    <Compile Include="Data\SessionFactoryElement.cs" />
+    <Compile Include="Data\StoredProcedureHelper.cs" />
+    <Compile Include="Data\UserType\Timestamp.cs" />
+    <Compile Include="Mvc\ActionFlowAttribute.cs" />
+    <Compile Include="Mvc\AsyncActionAttribute.cs" />
+    <Compile Include="Mvc\AsyncCallbackModelBinder.cs" />
+    <Compile Include="Mvc\AsyncHelper.cs" />
+    <Compile Include="Mvc\AsyncMvcHandler.cs" />
+    <Compile Include="Mvc\AsyncMvcRouteHandler.cs" />
+    <Compile Include="Mvc\AuthenticationLevel.cs" />
+    <Compile Include="Mvc\AuthLevelAttribute.cs" />
+    <Compile Include="Mvc\AuthorizeAttribute.cs" />
+    <Compile Include="Mvc\AuthorizeFilter.cs" />
+    <Compile Include="Mvc\ContentType.cs" />
+    <Compile Include="Mvc\ControllerBase.cs" />
+    <Compile Include="Mvc\ControllerExtensions.cs" />
+    <Compile Include="Mvc\CsrfToken.cs" />
+    <Compile Include="Mvc\DownloadResult.cs" />
+    <Compile Include="Mvc\EmptyAccountActionAttribute.cs" />
+    <Compile Include="Mvc\ErrorHandlerAttribute.cs" />
+    <Compile Include="Mvc\ExceptionHelper.cs" />
+    <Compile Include="Mvc\Exceptions\JsonDeserializeError.cs" />
+    <Compile Include="Mvc\Exceptions\MvcAuthorizeException.cs" />
+    <Compile Include="Mvc\Exceptions\MvcEmptyAccountException.cs" />
+    <Compile Include="Mvc\Exceptions\MvcExceptionAttribute.cs" />
+    <Compile Include="Mvc\Exceptions\MvcExceptionBase.cs" />
+    <Compile Include="Mvc\Exceptions\MvcKickOutException.cs" />
+    <Compile Include="Mvc\Exceptions\MvcValidationException.cs" />
+    <Compile Include="Mvc\Exceptions\PermissionDeniedException.cs" />
+    <Compile Include="Mvc\Exceptions\PropertyModel.cs" />
+    <Compile Include="Mvc\HttpExceptionHandlerAttribute.cs" />
+    <Compile Include="Mvc\HttpExceptionResult.cs" />
+    <Compile Include="Mvc\IAuthorization.cs" />
+    <Compile Include="Mvc\IErrorHanlder.cs" />
+    <Compile Include="Mvc\IFlowHandler.cs" />
+    <Compile Include="Mvc\JsonObjectFilterAttribute.cs" />
+    <Compile Include="Mvc\JsonPagerResult.cs" />
+    <Compile Include="Mvc\JsonResult.cs" />
+    <Compile Include="Mvc\MethodInvoker.cs" />
+    <Compile Include="Mvc\ModuleValidationFilter.cs" />
+    <Compile Include="Mvc\MvcErrorType.cs" />
+    <Compile Include="Mvc\Security\PermessionManager.cs" />
+    <Compile Include="Mvc\Security\Permission.cs" />
+    <Compile Include="Mvc\Security\PermissionTable.cs" />
+    <Compile Include="Mvc\SyncMvcHandler.cs" />
+    <Compile Include="Mvc\ValidateTokenAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceModel\DefaultErrorHandler.cs" />
+    <Compile Include="ServiceModel\DefaultMessageInspector.cs" />
+    <Compile Include="ServiceModel\ErrorHandlerServiceBehavior.cs" />
+    <Compile Include="ServiceModel\Exceptions\DataVersionNotMatchException.cs" />
+    <Compile Include="ServiceModel\Exceptions\ServiceExceptionAttribute.cs" />
+    <Compile Include="ServiceModel\NHibernate2ndLevelCacheBehaviorExtensionItem.cs" />
+    <Compile Include="ServiceModel\NHibernateClientEndpointBehavior.cs" />
+    <Compile Include="ServiceModel\NHibernateClientMessageInspector.cs" />
+    <Compile Include="ServiceModel\NHibernateEndpointMessageInspector.cs" />
+    <Compile Include="ServiceModel\NHibernateOpenSessionInViewContext.cs" />
+    <Compile Include="ServiceModel\NHibernateServiceBase.cs" />
+    <Compile Include="ServiceModel\NHibernateServiceBehaviorExtensionElement.cs" />
+    <Compile Include="ServiceModel\NHibernateSessionInViewServiceBehavior.cs" />
+    <Compile Include="ServiceModel\NHibernateTransaction.cs" />
+    <Compile Include="ServiceModel\ServiceBase.cs" />
+    <Compile Include="ServiceModel\ServiceClientBehaviorExtensionMethods.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

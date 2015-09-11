@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/VKeCRM.Portal.DataTransferObjects" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VKeCRM.Portal.DataTransferObjects" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:9000/PortalServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfOrders">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Orders" nillable="true" type="tns:Orders" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrders" nillable="true" type="tns:ArrayOfOrders" />
+  <xs:complexType name="Orders">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="OrderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OrderNo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Orders" nillable="true" type="tns:Orders" />
+  <xs:complexType name="Master">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Details" nillable="true" type="tns:ArrayOfDetail" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="MasterName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Master" nillable="true" type="tns:Master" />
+  <xs:complexType name="ArrayOfDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Detail" nillable="true" type="tns:Detail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDetail" nillable="true" type="tns:ArrayOfDetail" />
+  <xs:complexType name="Detail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DetailName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="MasterID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Detail" nillable="true" type="tns:Detail" />
+</xs:schema>
